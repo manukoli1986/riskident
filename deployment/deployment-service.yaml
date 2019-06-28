@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata: 
+  name: flask-app-image
+  labels: 
+    name: flask-app-image
+spec:
+  ports:
+    - name: http
+      port: 80
+      targetPort: 80
+  selector: 
+    name: flask-app-image
+    version: "v1"
+  type: LoadBalancer
