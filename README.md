@@ -109,6 +109,10 @@ REVISION        UPDATED                         STATUS          CHART           
 2               Fri Jun 28 17:09:01 2019        SUPERSEDED      my-app-riskident-2.0.0  Upgrade complete
 3               Fri Jun 28 17:10:25 2019        DEPLOYED        my-app-riskident-1.0.0  Rollback to 1
 
+To delete charts
+$ helm del --purge my-app
+$ helm list --all
+
 ```
 ![alt text](https://github.com/manukoli1986/riskident/blob/master/images/rollback.jpg)
 
