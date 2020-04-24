@@ -10,7 +10,11 @@ Overview:
 
 # Used "helm" to deploy app and upgraded the same without down time. We can use multiple ways of deployment i.e. Blue/Green or Rollout strategy. I am using Blue/green strategy here to deploy app which is working 100% wihtout downtime. 
 
-Let's begin install app using helm which is running version 1. As using minikube once application is using Loadbalance to send traffic and exposed on NodePort (32729) but on any cloud platform it will be exposing 80 port
+Let's begin install app using helm which is running version 1. As using minikube once application is using Loadbalance to send traffic and exposed on NodePort (32729) but on any cloud platform it will be exposing 80 port.
+
+Charts is only file which describe about the application. So we are not going to change it at all.
+
+Clone the repo and go to deployment/my-app-riskident folder. Edit the tags from value.yaml and then run below command to install your v1 app.
 ```
 $ helm install --name my-app my-app-riskident
 NAME:   my-app
@@ -48,7 +52,7 @@ Then check via curl command
 
 ![alt text](https://github.com/manukoli1986/riskident/blob/master/images/curl-v1.jpg)
 
-Now let's upgrade app with version 2
+Now let's upgrade app with version 2. Go to deployment/my-app-riskident folder again and update tag value from v1 to v2 in value.yaml file then run below command.
 ```
 $ helm upgrade my-app my-app-riskident
 Release "my-app" has been upgraded.

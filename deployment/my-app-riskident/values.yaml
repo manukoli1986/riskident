@@ -6,7 +6,7 @@ replicaCount: 1
 
 image:
   repository: docker.io/manukoli1986/flask-app-image
-  tag: v2
+  tag: v1
   pullPolicy: IfNotPresent
 
 imagePullSecrets: []
